@@ -1,15 +1,13 @@
 import { vitePlugin } from "@remix-run/dev";
+import { string } from "vite-plugin-string";
 
 export default {
-  future: {
-    v2_dev: true,
-    v2_routeConvention: true,
-    v2_meta: true,
-    v2_errorBoundary: true,
-  },
   serverBuildTarget: "vercel",
   server: "./server.js",
   vite: () => ({
-    plugins: [vitePlugin()],
+    plugins: [
+      vitePlugin(),
+      string({ include: "**/*.glsl" })  // 👈 esto es lo nuevo
+    ],
   }),
 };
