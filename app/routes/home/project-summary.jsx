@@ -11,7 +11,6 @@ import { useWindowSize } from '~/hooks';
 import { Suspense, lazy, useState } from 'react';
 import { cssProps, media } from '~/utils/style';
 import { useHydrated } from '~/hooks/useHydrated';
-import katakana from './katakana.svg';
 import styles from './project-summary.module.css';
 
 const Model = lazy(() =>
@@ -58,7 +57,7 @@ export function ProjectSummary({
         data-device={device}
         viewBox="0 0 751 136"
       >
-        <use href={`${katakana}#katakana-project`} />
+       
       </svg>
     );
   }
@@ -90,9 +89,16 @@ export function ProjectSummary({
           {description}
         </Text>
         <div className={styles.button} data-visible={visible}>
-          <Button iconHoverShift href={buttonLink} iconEnd="arrow-right">
-            {buttonText}
-          </Button>
+          {buttonLink && buttonText &&(
+            <a
+              href={buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className= "inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+            >
+              {buttonText}
+            </a>
+          )}
         </div>
       </div>
     );

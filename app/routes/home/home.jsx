@@ -41,7 +41,7 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Designer + Developer',
+    title: ' De',
     description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
   });
 };
@@ -103,10 +103,11 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Smart GreenHouse Automation System"
+        description="Designed an automated greenhouse system using IoT technology to manage multiple ecosystems"
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+
+        buttonLink="/docs/SmartGreenHouse.pdf"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -124,8 +125,8 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        title="Logistica LTC"
+        description="Developed a logistics route simulator for LTC Logistics, reducing costs and delivery times"
         buttonText="View website"
         buttonLink="https://gamestack.hamishw.com"
         model={{
@@ -148,8 +149,8 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Web app for Gemso"
+        description="Web application in which employees set goals and are reviewed by their superiors"
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
