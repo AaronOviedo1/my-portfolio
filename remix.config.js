@@ -1,5 +1,5 @@
 import { vitePlugin } from "@remix-run/dev";
-import { string } from "vite-plugin-string";
+import string from "vite-plugin-string"; // ✅ Import corregido
 
 export default {
   serverBuildTarget: "vercel",
@@ -7,7 +7,7 @@ export default {
   vite: () => ({
     plugins: [
       vitePlugin(),
-      string({ include: "**/*.glsl" })  // 👈 esto es lo nuevo
+      string({ include: "**/*.glsl" }) // ✅ Configuración para archivos GLSL
     ],
   }),
 };
