@@ -1,9 +1,15 @@
-import { vercelVite } from '@remix-run/dev/server-build-presets';
+import { vitePlugin } from "@remix-run/dev";
 
 export default {
-  serverBuildTarget: 'vercel',
-  server: './server.js',
-  // 👇 agrega este preset si usas Vite en Vercel
-  serverBuildPreset: vercelVite(),
+  future: {
+    v2_dev: true,
+    v2_routeConvention: true,
+    v2_meta: true,
+    v2_errorBoundary: true,
+  },
+  serverBuildTarget: "vercel",
+  server: "./server.js",
+  vite: () => ({
+    plugins: [vitePlugin()],
+  }),
 };
-
